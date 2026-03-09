@@ -1,3 +1,9 @@
+# FIAP - Faculdade de Informática e Administração Paulista
+
+<p align="center">
+  <img src="assets/logo-fiap.png" alt="FIAP Logo" width="50%">
+</p>
+
 ❤️ CardioIA – Fase 1: Batimentos de Dados
 
 📌 Visão Geral do Projeto
@@ -8,8 +14,28 @@ O **CardioIA** é um projeto acadêmico desenvolvido no curso de Inteligência A
 * 🧠 Dados Textuais (NLP)
 * 🖼 Dados Visuais (Visão Computacional – etapas futuras)
 
-Nesta **Fase 1 – Batimentos de Dados**, o foco está na construção, organização e análise das bases de dados que alimentarão os módulos inteligentes nas próximas fases do projeto.
+---
 
+## 👨‍🎓 Integrantes e Responsabilidades
+
+| Nome | RM | Responsabilidades Principais no Projeto (PBL de IA) |
+| :--- | :--- | :--- |
+| **Daniele Antonieta Garisto Dias** | RM565106 | **Data Preparation & Anotation:** Responsável pela preparação do dataset, estruturação de pastas para o YOLO, e garantia da qualidade e consistência das anotações (caixas delimitadoras e labels) utilizadas no treinamento. |
+| **Leandro Augusto Jardim da Cunha** | RM561395 | **Model Training & Baseline:** Implementação inicial do modelo **YOLOv8 Padrão (10 Épocas)** e da arquitetura **CNN para Classificação**. Condução dos primeiros ciclos de treinamento (baseline). |
+| **Luiz Eduardo da Silva** | RM561701 | **Model Optimization & Tuning:** Execução das simulações de alto desempenho (30 e **60 Épocas**). Otimização e ajuste fino de hiperparâmetros do YOLOv8 para alcançar o melhor $\text{mAP50-95}$. |
+| **João Victor Viana de Sousa** | RM565136 | **Evaluation & Analysis:** Extração e consolidação de todas as métricas (mAP50-95, Acurácia). Criação das tabelas comparativas e desenvolvimento da **Análise Crítica Final** (Comparativo YOLO vs. CNN). |
+| **Guilherme Ribeiro Slaviero** | RM561757 | **Project Lead & Documentation:** Gerenciamento do fluxo de trabalho, estruturação e padronização dos relatórios e do arquivo **README.md**. Garantia da reprodutibilidade do projeto no Google Colab. |
+
+---
+
+## 👩‍🏫 Professores
+
+- **Tutor(a):** Leonardo Ruiz Orabona  
+- **Coordenador(a):** Andre Godoi Chiovato  
+
+---
+
+Nesta **Fase 1 – Batimentos de Dados**, o foco está na construção, organização e análise das bases de dados que alimentarão os módulos inteligentes nas próximas fases do projeto.
 
 🩺 Parte 1 – Dados Numéricos (Machine Learning)
 
@@ -245,3 +271,4 @@ A Fase 1 estabeleceu uma base sólida para o CardioIA, integrando:
 * Organização estruturada de dados
 
 Os resultados demonstram a viabilidade de aplicação de Inteligência Artificial na identificação de fatores de risco cardiovascular, abrindo caminho para as próximas fases do projeto.
+
