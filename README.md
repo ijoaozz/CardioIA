@@ -268,6 +268,7 @@ Esse repositório permite:
 
 # 📁 Estrutura do Projeto
 
+```
 CardioIA_Fase1/
 │
 ├── .venv/                          # Ambiente virtual Python
@@ -308,6 +309,7 @@ CardioIA_Fase1/
 ├── teste_modelo_salvo.py           # Teste de carregamento do modelo salvo
 ├── requirements.txt                # Dependências do projeto
 └── README.md
+```
 
 O projeto foi organizado de forma modular, separando responsabilidades entre:
 
@@ -348,6 +350,53 @@ A **Fase 1 do CardioIA** estabeleceu uma base sólida para o desenvolvimento do 
 - Organização estruturada de datasets
 
 Os resultados demonstram o potencial da **Inteligência Artificial na identificação de fatores de risco cardiovascular**, abrindo caminho para futuras fases que incluirão **Visão Computacional aplicada a exames de ECG**.
+
+---
+
+# 📜 Licença do Dataset de Imagens ECG
+
+As imagens de eletrocardiograma utilizadas neste projeto são provenientes do dataset público:
+
+**ECG Images dataset of Cardiac Patients**
+
+Autores do dataset:
+
+- Ali Haider Khan  
+- Muzammil Hussain  
+
+---
+
+## 🪪 Licença
+
+Este dataset está licenciado sob a licença:
+
+**Creative Commons Attribution 4.0 International (CC BY 4.0)**
+
+Isso significa que os dados podem ser:
+
+- compartilhados
+- copiados
+- distribuídos
+- modificados
+- utilizados em pesquisas
+
+Desde que sejam respeitadas as seguintes condições:
+
+- seja dado **crédito apropriado aos autores**
+- seja incluído um **link para a licença original**
+- seja indicado **se modificações foram realizadas**
+
+Licença completa disponível em:
+
+https://creativecommons.org/licenses/by/4.0/
+
+---
+
+## ⚠ Observação Importante
+
+O uso deste dataset **não implica endosso dos autores ou das instituições responsáveis** pelo projeto CardioIA.
+
+Além disso, conteúdos eventualmente identificados como pertencentes a terceiros podem exigir permissões adicionais para reutilização.
 
 
 
