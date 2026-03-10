@@ -273,9 +273,12 @@ CardioIA_Fase1/
 ├── .venv/                          # Ambiente virtual Python
 ├── __pycache__/                    # Arquivos compilados automaticamente
 │
+├── asset/                        
+│   └── logo-fiap.png
+│
 ├── dataset/                        # Base de dados numérica
 │   └── heart.csv
-│
+
 ├── docs/                           # Dados Textuais (NLP)
 │   ├── analise_visual.py
 │   ├── conversor_nlp.py
@@ -345,5 +348,6 @@ A **Fase 1 do CardioIA** estabeleceu uma base sólida para o desenvolvimento do 
 - Organização estruturada de datasets
 
 Os resultados demonstram o potencial da **Inteligência Artificial na identificação de fatores de risco cardiovascular**, abrindo caminho para futuras fases que incluirão **Visão Computacional aplicada a exames de ECG**.
+
 
 
