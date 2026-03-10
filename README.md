@@ -4,119 +4,144 @@
   <img src="assets/logo-fiap.png" alt="FIAP Logo" width="50%">
 </p>
 
-❤️ CardioIA – Fase 1: Batimentos de Dados
+# ❤️ CardioIA – Fase 1: Batimentos de Dados
 
-📌 Visão Geral do Projeto
+## 📌 Visão Geral do Projeto
 
-O **CardioIA** é um projeto acadêmico desenvolvido no curso de Inteligência Artificial com o objetivo de simular o ecossistema de uma cardiologia moderna, integrando:
+O **CardioIA** é um projeto acadêmico desenvolvido no curso de Inteligência Artificial da **FIAP** com o objetivo de simular um **ecossistema inteligente de apoio à cardiologia moderna**, utilizando técnicas de **Ciência de Dados e Inteligência Artificial aplicadas à saúde**.
 
-* 📊 Dados Numéricos (Machine Learning)
-* 🧠 Dados Textuais (NLP)
-* 🖼 Dados Visuais (Visão Computacional – etapas futuras)
+O projeto integra diferentes tipos de dados médicos para apoiar a **identificação de fatores de risco cardiovascular**, explorando três grandes áreas da Inteligência Artificial:
 
----
+- 📊 **Dados Numéricos (Machine Learning)**
+- 🧠 **Dados Textuais (Processamento de Linguagem Natural - NLP)**
+- 🖼 **Dados Visuais (Visão Computacional – etapas futuras)**
 
-## 👨‍🎓 Integrantes e Responsabilidades
-
-| Nome | RM | Responsabilidades Principais no Projeto (PBL de IA) |
-| :--- | :--- | :--- |
-| **Daniele Antonieta Garisto Dias** | RM565106 | **Data Preparation & Anotation:** Responsável pela preparação do dataset, estruturação de pastas para o YOLO, e garantia da qualidade e consistência das anotações (caixas delimitadoras e labels) utilizadas no treinamento. |
-| **Leandro Augusto Jardim da Cunha** | RM561395 | **Model Training & Baseline:** Implementação inicial do modelo **YOLOv8 Padrão (10 Épocas)** e da arquitetura **CNN para Classificação**. Condução dos primeiros ciclos de treinamento (baseline). |
-| **Luiz Eduardo da Silva** | RM561701 | **Model Optimization & Tuning:** Execução das simulações de alto desempenho (30 e **60 Épocas**). Otimização e ajuste fino de hiperparâmetros do YOLOv8 para alcançar o melhor $\text{mAP50-95}$. |
-| **João Victor Viana de Sousa** | RM565136 | **Evaluation & Analysis:** Extração e consolidação de todas as métricas (mAP50-95, Acurácia). Criação das tabelas comparativas e desenvolvimento da **Análise Crítica Final** (Comparativo YOLO vs. CNN). |
-| **Guilherme Ribeiro Slaviero** | RM561757 | **Project Lead & Documentation:** Gerenciamento do fluxo de trabalho, estruturação e padronização dos relatórios e do arquivo **README.md**. Garantia da reprodutibilidade do projeto no Google Colab. |
+Essa abordagem multidisciplinar permite explorar como diferentes fontes de dados podem ser utilizadas para **auxiliar decisões clínicas baseadas em dados**.
 
 ---
 
-## 👩‍🏫 Professores
+# 🎯 Objetivos do Projeto
 
-- **Tutor(a):** Leonardo Ruiz Orabona  
-- **Coordenador(a):** Andre Godoi Chiovato  
+O **CardioIA** tem como principais objetivos:
+
+- Aplicar técnicas de **Machine Learning** para prever risco de doenças cardíacas.
+- Utilizar **Processamento de Linguagem Natural (NLP)** para extrair conhecimento de textos científicos da área médica.
+- Preparar uma base de **imagens de eletrocardiograma (ECG)** para futuras aplicações de **Visão Computacional**.
+- Demonstrar como a **Inteligência Artificial pode apoiar diagnósticos médicos**.
 
 ---
 
-Nesta **Fase 1 – Batimentos de Dados**, o foco está na construção, organização e análise das bases de dados que alimentarão os módulos inteligentes nas próximas fases do projeto.
+# 👨‍🎓 Integrantes e Responsabilidades
 
-🩺 Parte 1 – Dados Numéricos (Machine Learning)
+| Nome | RM | Responsabilidades Principais no CardioIA |
+|-----|-----|-----|
+| **Daniele Antonieta Garisto Dias** | RM565106 | **Data Preparation & Organização do Dataset:** preparação e limpeza do dataset `heart.csv`, verificação de valores faltantes, padronização das variáveis, criação do dicionário de dados e organização da estrutura de pastas do projeto. |
+| **Leandro Augusto Jardim da Cunha** | RM561395 | **Model Training (Machine Learning):** implementação e treinamento do modelo **Random Forest**, divisão treino/teste, execução da validação cruzada e salvamento do modelo treinado (`modelo_cardioia.pkl`). |
+| **Luiz Eduardo da Silva** | RM561701 | **Data Analysis & Visualization:** realização da análise exploratória dos dados (EDA), geração de gráficos estatísticos e análise de correlação entre variáveis utilizando bibliotecas como **Matplotlib** e **Seaborn**. |
+| **João Victor Viana de Sousa** | RM565136 | **Evaluation, NLP & Documentação:** extração e análise das métricas do modelo (acurácia e validação cruzada), implementação do processamento textual com **NLTK**, geração de frequência de palavras/WordCloud e elaboração da análise crítica final e documentação do projeto. |
 
-📂 Origem dos Dados
+---
+
+# 👩‍🏫 Professores
+
+**Tutor:** Leonardo Ruiz Orabona  
+**Coordenador:** Andre Godoi Chiovato  
+
+---
+
+# 🩺 Parte 1 – Dados Numéricos (Machine Learning)
+
+## 📂 Origem dos Dados
 
 O dataset utilizado é baseado no conhecido **Heart Disease Dataset**, amplamente utilizado em pesquisas acadêmicas e disponível em bases públicas como:
 
-* UCI Machine Learning Repository
-* Kaggle
+- UCI Machine Learning Repository
+- Kaggle
 
-Trata-se de um conjunto de dados reais anonimizados contendo informações clínicas de pacientes submetidos a exames cardiológicos.
+Trata-se de um conjunto de dados **reais e anonimizados** contendo informações clínicas de pacientes submetidos a exames cardiológicos.
 
-O dataset possui:
+### Estrutura do Dataset
 
-* 303 registros
-* 14 variáveis clínicas
-* 1 variável alvo (doença cardíaca)
+- **303 registros**
+- **14 variáveis clínicas**
+- **1 variável alvo (doença cardíaca)**
 
-📊 Variáveis do Dataset
+---
 
-| Variável             | Descrição Clínica             |
-| -------------------- | ----------------------------- |
-| idade                | Idade do paciente             |
-| sexo                 | 0 = Mulher / 1 = Homem        |
-| tipo_dor_peito       | Tipo de dor torácica          |
-| pressao_repouso      | Pressão arterial em repouso   |
-| colesterol           | Colesterol sérico             |
-| glicose_jejum        | Glicose em jejum              |
-| eletrocardiograma    | Resultado do ECG              |
-| freq_cardiaca_max    | Frequência cardíaca máxima    |
-| angina_exercicio     | Angina induzida por exercício |
-| depressao_st         | Depressão do segmento ST      |
-| inclinacao_st        | Inclinação do ST              |
-| num_vasos_principais | Número de vasos afetados      |
-| talassemia           | Distúrbio sanguíneo associado |
-| doenca_cardiaca      | 0 = Saudável / 1 = Doente     |
+# 📊 Variáveis do Dataset
 
-🧠 Variáveis Mais Relevantes Clinicamente
+| Variável | Descrição Clínica |
+|--------|--------|
+| idade | Idade do paciente |
+| sexo | 0 = Mulher / 1 = Homem |
+| tipo_dor_peito | Tipo de dor torácica |
+| pressao_repouso | Pressão arterial em repouso |
+| colesterol | Colesterol sérico |
+| glicose_jejum | Glicose em jejum |
+| eletrocardiograma | Resultado do ECG |
+| freq_cardiaca_max | Frequência cardíaca máxima |
+| angina_exercicio | Angina induzida por exercício |
+| depressao_st | Depressão do segmento ST |
+| inclinacao_st | Inclinação do ST |
+| num_vasos_principais | Número de vasos afetados |
+| talassemia | Distúrbio sanguíneo associado |
+| doenca_cardiaca | 0 = Saudável / 1 = Doente |
 
-De acordo com o modelo Random Forest treinado, as variáveis mais importantes foram:
+---
+
+# 🧠 Variáveis Mais Relevantes Clinicamente
+
+De acordo com o modelo **Random Forest** treinado, as variáveis mais importantes foram:
 
 1. **depressao_st**
 2. **freq_cardiaca_max**
 3. **num_vasos_principais**
 4. **tipo_dor_peito**
 
-🔬 Justificativa Clínica
+### 🔬 Justificativa Clínica
 
-* **Depressão do segmento ST**: Alterações no segmento ST são fortemente associadas a isquemia miocárdica.
-* **Frequência cardíaca máxima**: Capacidade funcional do coração sob esforço.
-* **Número de vasos principais afetados**: Indica gravidade da obstrução arterial.
-* **Tipo de dor no peito**: Diferencia dor cardíaca típica de outras causas.
+- **Depressão do segmento ST**: associada a isquemia miocárdica.
+- **Frequência cardíaca máxima**: indica capacidade funcional do coração sob esforço.
+- **Número de vasos principais afetados**: indica gravidade da obstrução arterial.
+- **Tipo de dor no peito**: ajuda a diferenciar dores cardíacas de outras causas.
 
-Essas variáveis são fundamentais para modelos preditivos em cardiologia, pois representam sinais fisiológicos diretamente relacionados à perfusão cardíaca e risco de infarto.
+Essas variáveis representam **sinais fisiológicos diretamente relacionados ao risco de infarto**.
 
-🤖 Modelo de Machine Learning
+---
 
-Foi utilizado:
+# 🤖 Modelo de Machine Learning
 
-* Algoritmo: **Random Forest Classifier**
-* Divisão: 80% treino | 20% teste
-* Validação Cruzada: 5 Folds
+Foi utilizado o algoritmo:
 
-📈 Resultados Obtidos
+**Random Forest Classifier**
 
-* Acurácia Teste: **83,61%**
-* Média Validação Cruzada: **83,82%**
-* Desvio padrão: 0,0288
+Configuração do modelo:
 
-🔎 Interpretação
+- **Divisão dos dados:** 80% treino | 20% teste
+- **Validação cruzada:** 5 Folds
 
-O modelo apresenta desempenho consistente, sem indícios relevantes de overfitting, demonstrando boa capacidade de generalização para novos pacientes.
+---
+
+# 📈 Resultados Obtidos
+
+| Métrica | Resultado |
+|------|------|
+| Acurácia no Teste | **83,61%** |
+| Média Validação Cruzada | **83,82%** |
+| Desvio Padrão | 0,0288 |
+
+### 🔎 Interpretação
+
+O modelo apresenta **desempenho consistente**, sem indícios relevantes de **overfitting**, demonstrando boa capacidade de generalização para novos pacientes.
 
 O modelo treinado foi salvo como:
 
-models/modelo_cardioia.pkl
+`models/modelo_cardioia.pkl`
 
 Permitindo reutilização futura sem necessidade de novo treinamento.
 
 
-🧠 Parte 2 – Dados Textuais (NLP)
+# 🧠 Parte 2 – Dados Textuais (NLP)
 
 📂 Origem dos Textos
 
@@ -143,74 +168,105 @@ Foi aplicado:
 
 Os textos limpos foram salvos como:
 
-*_limpo.txt
+`*_limpo.txt`
 
 
-🤖 Como NLP Pode Ser Aplicado
+
+---
+
+# 🤖 Aplicações do NLP na Saúde
 
 Os textos podem ser explorados por algoritmos de NLP para:
 
-1️⃣ Extração de Sintomas
+### 1️⃣ Extração de Sintomas
 
 Identificação automática de termos como:
 
-* dor torácica
-* dispneia
-* fadiga
-* hipertensão
+- dor torácica
+- dispneia
+- fadiga
+- hipertensão
 
-Aplicável em triagem automatizada.
+Aplicável em **triagem automatizada de pacientes**.
 
-2️⃣ Classificação de Tópicos
+### 2️⃣ Classificação de Tópicos
 
-Agrupar textos por:
+Agrupamento de textos em categorias como:
 
-* prevenção
-* diagnóstico
-* tratamento
-* fatores de risco
+- prevenção
+- diagnóstico
+- tratamento
+- fatores de risco
 
-Importante para organização de prontuários médicos digitais.
+### 3️⃣ Análise de Frequência
 
-3️⃣ Análise de Frequência
+Permite identificar:
 
-Identificação de termos mais recorrentes pode revelar:
+- fatores de risco mais citados
+- tendências em literatura médica
+- padrões de sintomas relatados
 
-* Principais fatores de risco mencionados
-* Tendências em literatura médica
-* Padrões em sintomas relatados
+### 4️⃣ Análise de Sentimentos (Futuro)
 
-4️⃣ Análise de Sentimentos (Etapas Futuras)
+Pode ser utilizada para:
 
-Aplicável para:
+- analisar relatos de pacientes
+- monitorar saúde mental associada a doenças cardíacas
 
-* Avaliar relatos de pacientes
-* Monitorar saúde mental associada a doenças cardíacas
+---
 
+# 🖼 Parte 3 – Dados Visuais (Visão Computacional)
 
-🎯 Relevância para IA na Saúde
+## 📂 Dataset de Imagens de ECG
 
-O uso de NLP na saúde permite:
+Para futuras etapas do projeto será utilizado o dataset:
 
-* Automatização de triagens
-* Apoio à decisão clínica
-* Extração de informação de prontuários
-* Redução de carga administrativa médica
-* Detecção precoce de padrões de risco
+**ECG Images dataset of Cardiac Patients**
 
+Disponível em:
 
-📊 Governança de Dados e Viés
+https://data.mendeley.com/datasets/gwbz3fsgp8/2
 
-Este projeto considera:
+DOI:
 
-* Dados anonimizados
-* Possíveis vieses relacionados a sexo e idade
-* Necessidade de validação clínica antes de uso real
+https://doi.org/10.17632/gwbz3fsgp8.2
 
-É importante destacar que modelos preditivos em saúde devem ser utilizados apenas como apoio à decisão médica, nunca como substituição da avaliação profissional.
+Esse dataset foi desenvolvido para apoiar pesquisas em **detecção automática de doenças cardíacas a partir de exames de ECG**.
 
+---
 
-📁 Estrutura do Projeto
+# 📊 Estrutura do Dataset de ECG
+
+| Categoria | Quantidade de Imagens |
+|------|------|
+| Imagens de ECG de pacientes com infarto do miocárdio | 239 |
+| Imagens de ECG de pacientes com batimentos cardíacos anormais | 233 |
+| Imagens de ECG de pacientes com histórico de infarto do miocárdio | 172 |
+| Imagens de ECG de pessoa normal | 284 |
+
+Total aproximado:
+
+**928 imagens de ECG**
+
+Essas imagens podem ser utilizadas para treinamento de modelos de **Redes Neurais Convolucionais (CNN)**.
+
+---
+
+# ☁ Armazenamento das Imagens
+
+As imagens utilizadas no projeto estão armazenadas no Google Drive do grupo:
+
+https://drive.google.com/drive/folders/10J-JmmMmHfqOYicCnK0faUF11TV-F7xZ
+
+Esse repositório permite:
+
+- compartilhamento entre integrantes
+- organização do dataset
+- integração com notebooks de treinamento
+
+---
+
+# 📁 Estrutura do Projeto
 
 CardioIA_Fase1/
 │
@@ -258,17 +314,36 @@ O projeto foi organizado de forma modular, separando responsabilidades entre:
 * processamento textual (NLP),
 * persistência do modelo treinado.
 
-Essa estrutura facilita manutenção, escalabilidade e futuras integrações com APIs ou interfaces gráficas.
 
+A estrutura modular facilita:
 
-🚀 Conclusão
+- manutenção
+- escalabilidade
+- reutilização do modelo
 
-A Fase 1 estabeleceu uma base sólida para o CardioIA, integrando:
+---
 
-* Ciência de Dados
-* Machine Learning
-* Processamento de Linguagem Natural
-* Organização estruturada de dados
+# 📊 Governança de Dados e Viés
 
-Os resultados demonstram a viabilidade de aplicação de Inteligência Artificial na identificação de fatores de risco cardiovascular, abrindo caminho para as próximas fases do projeto.
+O projeto considera aspectos importantes de **IA responsável**:
+
+- utilização de **dados anonimizados**
+- possíveis **vieses relacionados a sexo e idade**
+- necessidade de **validação clínica**
+
+Modelos de IA devem ser utilizados **apenas como apoio à decisão médica**, e nunca como substituição da avaliação profissional.
+
+---
+
+# 🚀 Conclusão
+
+A **Fase 1 do CardioIA** estabeleceu uma base sólida para o desenvolvimento do projeto, integrando:
+
+- Ciência de Dados
+- Machine Learning
+- Processamento de Linguagem Natural
+- Organização estruturada de datasets
+
+Os resultados demonstram o potencial da **Inteligência Artificial na identificação de fatores de risco cardiovascular**, abrindo caminho para futuras fases que incluirão **Visão Computacional aplicada a exames de ECG**.
+
 
