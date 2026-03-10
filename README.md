@@ -44,7 +44,7 @@ O **CardioIA** tem como principais objetivos:
 
 # 👩‍🏫 Professores
 
-**Tutor:** Leonardo Ruiz Orabona  
+**Tutor:** Caique Nonato da Silva Bezerra 
 **Coordenador:** Andre Godoi Chiovato  
 
 ---
@@ -397,6 +397,7 @@ https://creativecommons.org/licenses/by/4.0/
 O uso deste dataset **não implica endosso dos autores ou das instituições responsáveis** pelo projeto CardioIA.
 
 Além disso, conteúdos eventualmente identificados como pertencentes a terceiros podem exigir permissões adicionais para reutilização.
+
 
 
 
